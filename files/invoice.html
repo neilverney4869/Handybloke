@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quote &amp; Invoice – The Helpful Bloke | Canberra Handyman</title>
+  <meta name="description" content="Request a quote or view your invoice from The Helpful Bloke – Neil Verney, Canberra's trusted handyman.">
+  <meta name="geo.region" content="AU-ACT">
+  <link rel="canonical" href="https://thehelpfulbloke.com/invoice.html">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .invoice-wrap { max-width: 720px; margin: 0 auto; }
+    .coming-soon-box { background: white; border: 1px solid var(--border); border-radius: var(--radius); padding: 3rem 2.5rem; text-align: center; box-shadow: var(--shadow); }
+    .coming-soon-box .icon { font-size: 3.5rem; margin-bottom: 1rem; }
+    .coming-soon-box h2 { font-size: 1.75rem; color: var(--navy); margin-bottom: 0.75rem; }
+    .coming-soon-box p { color: var(--muted); font-size: 1rem; line-height: 1.75; max-width: 480px; margin: 0 auto 1.75rem; }
+    .contact-options { display: flex; flex-direction: column; gap: 0.75rem; align-items: center; }
+    .contact-option { display: flex; align-items: center; gap: 0.75rem; background: var(--off); border: 1px solid var(--border); border-radius: 10px; padding: 0.9rem 1.5rem; font-family: 'Bricolage Grotesque', sans-serif; font-size: 0.95rem; font-weight: 600; color: var(--navy); width: 100%; max-width: 360px; transition: all 0.2s; text-decoration: none; }
+    .contact-option:hover { background: var(--navy); color: white; border-color: var(--navy); transform: translateY(-2px); box-shadow: var(--shadow); }
+  </style>
+</head>
+<body>
+<a href="#main" class="skip-link">Skip to main content</a>
+<header>
+  <nav aria-label="Main navigation">
+    <a href="index.html" class="logo"><img src="logo.png" alt="The Helpful Bloke logo" width="52" height="52"><div class="logo-text"><span class="logo-name">the helpful bloke</span><span class="logo-sub">with Neil Verney</span></div></a>
+    <ul class="nav-links" id="navMenu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="index.html#services">Services</a></li>
+      <li><a href="portfolio.html">Our Work</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="scheduler.html">Book a Time</a></li>
+      <li><a href="invoice.html" class="active">Quote &amp; Invoice</a></li>
+      <li><a href="tel:+61490668966" class="nav-cta">📞 0490 668 966</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+  </nav>
+</header>
+
+<main id="main">
+  <div class="page-hero">
+    <div class="inner">
+      <span class="label">Pricing &amp; Paperwork</span>
+      <h1>Quote &amp; Invoice</h1>
+      <p>Get a fair, transparent quote — or contact Neil directly to discuss your job.</p>
+    </div>
+  </div>
+
+  <section>
+    <div class="inner">
+      <div class="invoice-wrap">
+        <div class="coming-soon-box">
+          <div class="icon">📋</div>
+          <h2>Online quoting coming soon</h2>
+          <p>Neil is setting up an online quote and invoice system. In the meantime, reach out directly — you'll get a fast, honest reply with a clear price.</p>
+          <div class="contact-options">
+            <a href="tel:+61490668966" class="contact-option">📱 Call Neil: 0490 668 966</a>
+            <a href="mailto:hello@thehelpfulbloke.com" class="contact-option">✉️ hello@thehelpfulbloke.com</a>
+            <a href="scheduler.html" class="contact-option">📅 Book a free consult online</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="suburbs-strip"><p><strong>Serving all Canberra &amp; ACT:</strong> Hawker · Belconnen · Gungahlin · Lyneham · Braddon · Dickson · Woden · Weston Creek · Kambah · Tuggeranong · Molonglo · Queanbeyan · and more</p></div>
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand"><div class="logo" style="margin-bottom:0.75rem;"><img src="logo.png" alt="" width="40" height="40"><div class="logo-text"><span class="logo-name">the helpful bloke</span><span class="logo-sub">with Neil Verney</span></div></div><p>Reliable handyman &amp; property maintenance across Canberra &amp; ACT.</p><p class="creds">WWVP No. 00753390 · Fully Insured · ABN: 50 751 840 360</p></div>
+      <div><h4>Quick Links</h4><ul class="footer-links"><li><a href="index.html">Home</a></li><li><a href="portfolio.html">Our Work</a></li><li><a href="scheduler.html">Book a Time</a></li><li><a href="invoice.html">Quote &amp; Invoice</a></li></ul></div>
+      <div class="footer-contact"><h4>Contact</h4><p><a href="tel:+61490668966">📱 0490 668 966</a></p><p><a href="mailto:hello@thehelpfulbloke.com">✉️ hello@thehelpfulbloke.com</a></p><p>📍 Canberra &amp; ACT · Mon–Sat 8am–6pm</p></div>
+    </div>
+    <div class="footer-bottom"><p>© 2025 The Helpful Bloke · ABN 50 751 840 360</p></div>
+  </footer>
+</main>
+<script>
+const ham=document.getElementById('hamburger'),menu=document.getElementById('navMenu');
+ham.addEventListener('click',()=>{const o=menu.classList.toggle('open');ham.setAttribute('aria-expanded',o);ham.textContent=o?'✕':'☰';});
+menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{menu.classList.remove('open');ham.setAttribute('aria-expanded',false);ham.textContent='☰';}));
+</script>
+</body>
+</html>

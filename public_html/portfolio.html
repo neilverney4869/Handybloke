@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Work – The Helpful Bloke | Completed Jobs Canberra ACT</title>
+  <meta name="description" content="See completed handyman jobs by The Helpful Bloke (Neil Verney) across Canberra & ACT — painting, artificial turf, tap repairs, assembly and more.">
+  <meta name="geo.region" content="AU-ACT">
+  <link rel="canonical" href="https://thehelpfulbloke.com/portfolio.html">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .filter-bar { background: var(--off); border-bottom: 1px solid var(--border); padding: 1rem 1.5rem; flex-shrink: 0; }
+    .filter-inner { max-width: var(--max); margin: 0 auto; display: flex; align-items: center; gap: 0.65rem; flex-wrap: wrap; }
+    .filter-label { font-family: 'Bricolage Grotesque', sans-serif; font-size: 0.77rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin-right: 0.25rem; }
+    .filter-btn { font-family: 'Bricolage Grotesque', sans-serif; font-size: 0.8rem; font-weight: 700; padding: 0.375rem 0.8rem; border-radius: 50px; border: 1.5px solid var(--border); background: white; color: var(--text); cursor: pointer; transition: all 0.2s; }
+    .filter-btn:hover { border-color: var(--navy); color: var(--navy); }
+    .filter-btn.active { background: var(--navy); color: white; border-color: var(--navy); }
+
+    .portfolio-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.25rem; }
+    .job-card { background: white; border-radius: var(--radius); overflow: hidden; border: 1px solid var(--border); transition: all 0.3s var(--ease); box-shadow: 0 2px 8px rgba(0,38,84,0.06); }
+    .job-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-lg); border-color: transparent; }
+    .job-card.hidden { display: none; }
+    .job-img-ph { width: 100%; aspect-ratio: 4/3; background: linear-gradient(135deg, var(--navy) 0%, var(--navy-l) 100%); display: flex; align-items: center; justify-content: center; font-size: 3rem; color: rgba(255,255,255,0.45); position: relative; }
+    .job-badge { position: absolute; top: 0.65rem; left: 0.65rem; background: var(--amber); color: var(--navy-d); font-family: 'Bricolage Grotesque', sans-serif; font-size: 0.7rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.06em; padding: 0.25rem 0.6rem; border-radius: 50px; }
+    .job-body { padding: 1.25rem; }
+    .job-title { font-size: 0.975rem; color: var(--navy); margin-bottom: 0.4rem; }
+    .job-desc { font-size: 0.82rem; color: var(--muted); line-height: 1.55; margin-bottom: 0.875rem; }
+    .job-meta { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.4rem; padding-top: 0.75rem; border-top: 1px solid var(--border); }
+    .job-location { font-family: 'Bricolage Grotesque', sans-serif; font-size: 0.75rem; font-weight: 600; color: var(--muted); }
+    .job-cost { font-family: 'Bricolage Grotesque', sans-serif; font-size: 0.875rem; font-weight: 800; color: var(--navy); }
+
+    .stats-band { background: var(--navy); color: white; padding: 2.5rem 1.5rem; flex-shrink: 0; }
+    .stats-grid { max-width: var(--max); margin: 0 auto; display: grid; grid-template-columns: repeat(4,1fr); gap: 1.5rem; text-align: center; }
+    .stat-num { font-family: 'Bricolage Grotesque', sans-serif; font-size: 2.5rem; font-weight: 800; color: var(--amber); line-height: 1; margin-bottom: 0.3rem; }
+    .stat-label { font-size: 0.845rem; color: rgba(255,255,255,0.7); }
+
+    .port-cta { background: linear-gradient(135deg, var(--amber) 0%, var(--amber-d) 100%); padding: 3.5rem 1.5rem; text-align: center; flex-shrink: 0; }
+    .port-cta h2 { font-size: clamp(1.6rem,3vw,2.25rem); color: var(--navy-d); margin-bottom: 0.6rem; }
+    .port-cta p { color: rgba(28,43,58,0.8); margin-bottom: 1.75rem; }
+    .port-cta-btns { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; }
+
+    @media (max-width: 900px) { .portfolio-grid { grid-template-columns: 1fr 1fr; } .stats-grid { grid-template-columns: 1fr 1fr; gap: 1rem; } }
+    @media (max-width: 560px) { .portfolio-grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+<a href="#main" class="skip-link">Skip to main content</a>
+<header>
+  <nav aria-label="Main navigation">
+    <a href="index.html" class="logo"><img src="logo.png" alt="The Helpful Bloke logo" width="52" height="52"><div class="logo-text"><span class="logo-name">the helpful bloke</span><span class="logo-sub">with Neil Verney</span></div></a>
+    <ul class="nav-links" id="navMenu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="index.html#services">Services</a></li>
+      <li><a href="portfolio.html" class="active">Our Work</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="scheduler.html">Book a Time</a></li>
+      <li><a href="invoice.html">Quote &amp; Invoice</a></li>
+      <li><a href="tel:+61490668966" class="nav-cta">📞 0490 668 966</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+  </nav>
+</header>
+
+<main class="snap-page" id="main">
+
+  <div class="snap-section snap-hero" id="snap0">
+    <div class="page-hero"><div class="inner"><span class="label">Portfolio</span><h1>Jobs We've Completed</h1><p>Real work, real results — across Belconnen, North Canberra and the wider ACT region.</p></div></div>
+    <div class="filter-bar">
+      <div class="filter-inner">
+        <span class="filter-label">Filter:</span>
+        <button class="filter-btn active" data-filter="all">All Jobs</button>
+        <button class="filter-btn" data-filter="painting">Painting &amp; Staining</button>
+        <button class="filter-btn" data-filter="lawn">Lawn &amp; Turf</button>
+        <button class="filter-btn" data-filter="repairs">Repairs</button>
+        <button class="filter-btn" data-filter="assembly">Assembly</button>
+      </div>
+    </div>
+    <div class="stats-band">
+      <div class="stats-grid">
+        <div><div class="stat-num">50+</div><p class="stat-label">Jobs completed</p></div>
+        <div><div class="stat-num">6+</div><p class="stat-label">ACT districts served</p></div>
+        <div><div class="stat-num">5★</div><p class="stat-label">Customer rating</p></div>
+        <div><div class="stat-num">100%</div><p class="stat-label">Insured &amp; registered</p></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="snap-section" id="snap1">
+    <section style="flex:1;overflow-y:auto;" aria-labelledby="port-h2">
+      <div class="inner">
+        <div class="section-head"><span class="label">Completed Jobs</span><h2 id="port-h2">What Neil gets done</h2><p>Recent completed projects across Canberra &amp; ACT showing quality and range of work.</p></div>
+        <div class="portfolio-grid" id="portGrid">
+          <article class="job-card" data-category="painting"><div class="job-img-ph"><span class="job-badge">Painting</span><img src="jobs/frame-stain-done.jpeg" alt="Aged Timber stained"></src:></div><div class="job-body"><h3 class="job-title">Timber Window Frame – Clean &amp; Stain</h3><p class="job-desc">Cleaned and re-stained a timber window frame, restoring the finish and protecting against Canberra's harsh winters.</p><div class="job-meta"><span class="job-location">📍 Hawker, Belconnen</span><span class="job-cost">$150</span></div></div></article>
+          <article class="job-card" data-category="painting"><div class="job-img-ph"><span class="job-badge">Painting</span><img src="jobs/pallet-fence-stain-done.jpeg" alt="Aged Timber stained and painted"></src:></div><div class="job-body"><h3 class="job-title">Gate, Stairs &amp; Balustrades – Paint &amp; Stain</h3><p class="job-desc">Full clean, paint and stain of timber gate, external stairs and balustrades. Plus staining of timber pale fencing. Complete exterior refresh.</p><div class="job-meta"><span class="job-location">📍 Hawker, Belconnen</span><span class="job-cost">$1,500</span></div></div></article>
+          <article class="job-card" data-category="lawn"><div class="job-img-ph"><span class="job-badge">Lawn &amp; Turf</span><img src="jobs/turf-done1.jpeg" alt="Artificial turf installed"></src:></div><div class="job-body"><h3 class="job-title">Artificial Turf Installation – 45m²</h3><p class="job-desc">Cleared, levelled and installed blue metal dust base and 45m² of artificial turf, replacing a weedy area with a clean low-maintenance lawn.</p><div class="job-meta"><span class="job-location">📍 Hawker, Belconnen</span><span class="job-cost">$4,500</span></div></div></article>
+          <article class="job-card" data-category="painting"><div class="job-img-ph"><span class="job-badge">Painting</span><img src="jobs/landing-clean&stain-done.jpeg" alt ="Clean & Stain landing and paint ballustrades and steps"></src:> </div><div class="job-body"><h3 class="job-title">Deck Landing – Stain, Paint &amp; Balustrades</h3><p class="job-desc">Cleaned and stained the timber landing then painted balustrades and stairs for a fresh finish.</p><div class="job-meta"><span class="job-location">📍 Belconnen, North Canberra</span><span class="job-cost">$1,000</span></div></div></article>
+          <article class="job-card" data-category="repairs"><div class="job-img-ph"><span class="job-badge">Repairs</span><img src="jobs/tapfix-done.jpeg" alt="Tap replaced"></src:></div><div class="job-body"><h3 class="job-title">Leaking Tap Replacement</h3><p class="job-desc">Replaced a leaking external tap. The existing spindle was too damaged to repair — full replacement was the right call.</p><div class="job-meta"><span class="job-location">📍 Belconnen, North Canberra</span><span class="job-cost">$120</span></div></div></article>
+          <article class="job-card" data-category="assembly"><div class="job-img-ph"><span class="job-badge">Assembly</span><img src="jobs/benchswing-set-done.jpeg" alt="Benchswing set installed"></src:></div><div class="job-body"><h3 class="job-title">Timber Bench Swing – Move &amp; Assemble</h3><p class="job-desc">Moved and fully assembled a cushioned timber bench swing set in a new garden location.</p><div class="job-meta"><span class="job-location">📍 Hawker, Belconnen</span><span class="job-cost">$150</span></div></div></article>
+          <article class="job-card" data-category="repairs"><div class="job-img-ph"><span class="job-badge">Repairs</span><img src="jobs/accessibility-ramp-done.jpeg" alt="Accessibility ramp built and installed"></src:></div><div class="job-body"><h3 class="job-title">Accessibility Ramp – Build &amp; Paint</h3><p class="job-desc">Designed, constructed and painted a safe accessibility ramp for an elderly resident to move freely in and out of their home.</p><div class="job-meta"><span class="job-location">📍 Hawker, Belconnen</span><span class="job-cost">$1,500</span></div></div></article>
+          <article class="job-card" data-category="lawn"><div class="job-img-ph"><span class="job-badge">Lawn Care</span><img src="jobs/pool-grass-done.jpeg" alt="Turf laid and mowed"></src:></div><div class="job-body"><h3 class="job-title">Lawn Mowing &amp; Garden Maintenance</h3><p class="job-desc">Regular mowing, edging and whipper snipping for residential properties across Canberra. Keeps gardens looking sharp year-round.</p><div class="job-meta"><span class="job-location">📍 Canberra &amp; ACT wide</span><span class="job-cost">From $80</span></div></div></article>
+          <article class="job-card" data-category="assembly"><div class="job-img-ph"><span class="job-badge">Tech Setup</span><img src="jobs/tv-and-soundbar-mount-setup.jpeg" alt="TV and soundbar mount, install & setup"></src:></div><div class="job-body"><h3 class="job-title">TV Wall Mounting &amp; Tech Setup</h3><p class="job-desc">TV mounting, cable management, WiFi setup and smart home device configuration, Website design, domain registration, ongoing support and hosting. Easy and stress-free.</p><div class="job-meta"><span class="job-location">📍 Canberra &amp; ACT wide</span><span class="job-cost">From $120</span></div></div></article>
+        </div>
+      </div>
+    </section>
+    <div class="port-cta">
+      <h2>Your job could be next</h2>
+      <p>Neil provides a free, no-obligation quote for all work across Canberra &amp; ACT.</p>
+      <div class="port-cta-btns">
+        <a href="index.html#snap3" class="btn btn-navy">Request a Quote →</a>
+        <a href="scheduler.html" class="btn btn-outline">📅 Book a Time</a>
+        <a href="invoice.html" class="btn btn-outline">💰 Get a Price Estimate</a>
+      </div>
+    </div>
+    <div class="suburbs-strip"><p><strong>Serving all Canberra &amp; ACT:</strong> Hawker · Belconnen · Gungahlin · Lyneham · Braddon · Woden · Weston Creek · Kambah · Tuggeranong · Molonglo · Queanbeyan · and more</p></div>
+    <footer>
+      <div class="footer-grid">
+        <div class="footer-brand"><div class="logo" style="margin-bottom:0.75rem;"><img src="logo.png" alt="" width="40" height="40"><div class="logo-text"><span class="logo-name">the helpful bloke</span><span class="logo-sub">with Neil Verney</span></div></div><p>Reliable handyman &amp; property maintenance across Canberra &amp; ACT.</p><p class="creds">WWVP No. 00753390 · Fully Insured · ABN: 50 751 840 360</p></div>
+        <div><h4>Quick Links</h4><ul class="footer-links"><li><a href="index.html">Home</a></li><li><a href="about.html">About Neil</a></li><li><a href="scheduler.html">Book a Time</a></li><li><a href="invoice.html">Quote &amp; Invoice</a></li></ul></div>
+        <div class="footer-contact"><h4>Contact</h4><p><a href="tel:+61490668966">📱 0490 668 966</a></p><p><a href="mailto:hello@thehelpfulbloke.com">✉️ hello@thehelpfulbloke.com</a></p><p>📍 Canberra &amp; ACT · Mon–Sat 8am–6pm</p></div>
+      </div>
+      <div class="footer-bottom"><p>© 2025 The Helpful Bloke · ABN 50 751 840 360</p></div>
+    </footer>
+  </div>
+
+</main>
+<script>
+const ham=document.getElementById('hamburger'),menu=document.getElementById('navMenu');
+ham.addEventListener('click',()=>{const o=menu.classList.toggle('open');ham.setAttribute('aria-expanded',o);ham.textContent=o?'✕':'☰';});
+menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{menu.classList.remove('open');ham.setAttribute('aria-expanded',false);ham.textContent='☰';}));
+document.querySelectorAll('.filter-btn').forEach(btn=>{
+  btn.addEventListener('click',()=>{
+    document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active'));
+    btn.classList.add('active');
+    const f=btn.dataset.filter;
+    document.querySelectorAll('.job-card').forEach(c=>c.classList.toggle('hidden',f!=='all'&&c.dataset.category!==f));
+  });
+});
+</script>
+</body>
+</html>
