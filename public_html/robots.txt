@@ -1,8 +1,0 @@
-User-agent: *
-Allow: /
-
-# Block utility pages from indexing (not valuable as landing pages)
-Disallow: /invoice.html
-Disallow: /scheduler.html
-
-Sitemap: https://thehelpfulbloke.com/sitemap.xml
